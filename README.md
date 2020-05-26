@@ -1,6 +1,6 @@
 # FistNuxtApp
 
-> My neat Nuxt.js project
+> Basic nuxt app using a movies data api
 
 ## Build Setup
 
