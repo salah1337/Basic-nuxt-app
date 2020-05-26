@@ -1,34 +1,33 @@
-.titleBar {
+.content{
+    height: 90vh;
+    width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.searchBar{
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    .input{
-        display: flex;
-        flex-direction: column;
+    color: white;
+    .title{
+        height: 200px;
+        font-size: calc(1.5vw + 1.5rem);
+        user-select: none;
     }
-}
-.movieList{
-    margin-top: 10px;
-    display: grid;
-    grid-template-rows: repeat(auto-fill, 1fr);
-    grid-template-columns: 1fr;
-    .movie{
-        min-height: 100%;
-        .link{
-            img{
-                width: 200px;
-                height: 100%;
-                margin-right: 5px;
-            }
-            display: flex;
-
-        }
-        margin-bottom: 5px;
+    .input{
+        height: 40px;
+        margin: 40px 0;
+        width: 90vw;
+        max-width: 500px;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: calc(0.7rem + 0.7vw);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .btn{
+        padding: 0.5rem 2.7rem;
+        color: var(--red);
+        font-weight: 700;
+        background-color: white;
+        border-radius: 2px;
+        font-size: calc(0.7rem + 0.7vw);
+        cursor: pointer;
     }
 }

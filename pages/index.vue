@@ -1,42 +1,32 @@
 <template>
-  <div class="container">
-      <div>
-        <h1>
-          The movie library
-        </h1>
-        <nuxt-link :to="'/movies'">
-          <h5>
-            Go to movies list
-          </h5>
+  <div>
+    <div class="content">
+        <h1 class="title">Movie Finder</h1>
+        <input v-model="title" disabled class="input" type="text">
+        <nuxt-link :to="`/movies`">
+          <a class="btn">Find</a>
         </nuxt-link>
-        <nuxt-link :to="'/movies/random'">
-          <h5>
-            Get random movie
-          </h5>
-        </nuxt-link>
-      </div>
+    </div>
   </div>
 </template>
 
 <script>
 
+
 export default {
-  async asyncData({ $axios }){
-    let res = await $axios.get('/?apikey=2d879e3a&s=hobbit')
-    let movies = res.data.Search
-    let count = res.data.totalResults
-    return {
-      movies, 
-      count
+  data() {
+    return{
+      title:''
     }
-  },
+  }, 
+  methods: {
+    findMovie: function() {
+
+    }
+  }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-
-}
+<style lang="scss">
+@import "~/assets/scss/movies/main.scss";
 </style>

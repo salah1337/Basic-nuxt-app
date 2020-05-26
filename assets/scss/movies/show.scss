@@ -1,19 +1,26 @@
-.movie{
+.content{
+    min-height: 85vh;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.4fr 1fr;
+    grid-column-gap: 25px;
+    color: white;
+    .info{
+        .title{
+            font-size: calc(1.5vw + 1.5rem);
+        }
+        .subtitle{
+            font-size: calc(0.6vw + 0.6rem);
+            color: rgb(231, 166, 24);
+        }
+        .description, .actors, .origin{
+            margin: 5px 0;
+        }
+    }
 }
-.label{
-    color: rgb(58, 181, 58);
-}
-.runtime{
-    font-size: calc(0.6rem + 0.6vw);
-    color: gray;
-}
-.year, .imdbScore{
-    font-size: calc(0.6rem + 0.6vw);
-    color: rgb(233, 182, 86);
-}
-.description{
-    font-size: calc(0.7rem + 0.7vw);
-    color: rgb(199, 199, 199);
+img{
+    max-width: 100%;
 }

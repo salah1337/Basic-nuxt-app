@@ -1,29 +1,17 @@
 <template>
-  <div class="container">
-      <div>
-        <nuxt-link :to="'/movies'">
-          <h4>
-            Back to all
-          </h4>
-        </nuxt-link>
-      </div>
-      <div class="movie">
-        <div>
+ <div class="content">
         <img v-if="movie.Poster !== 'N/A'" :src="`${ movie.Poster }`" alt="">
         <img v-else src="~/assets/placeholder.jpg" alt="">
+        <div class="info">
+            <h3 class="title">{{movie.Title}}  {{movie.Year}}</h3>
+            <h4 class="subtitle">{{movie.Runtime}} {{movie.imdbRating}}</h4>
+            <div class="description">
+                {{movie.Plot}}            
+            </div>
+            <div class="actors">{{movie.Actors}}</div>
+            <div class="origin">{{movie.Language}} {{movie.Country}}</div>
         </div>
-        <div>
-          <h5>
-          {{ movie.Title }} <span class="year"> {{ movie.Year }} </span>
-          <p class="runtime"> {{ movie.Runtime }} </p>
-          </h5>
-          <p>
-          <span class="label"> Description </span> <br/> <span class="description"> {{ movie.Plot }} </span>
-          </p>
-          <p class="imdbScore">IMDB: {{ movie.imdbRating }} </p>
-        </div>
-      </div>
-  </div>
+    </div>
 </template>
 
 <script>
